@@ -315,7 +315,6 @@ install_python() {
   fi
 }
 
-
 # Begin!
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@%* ./&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
@@ -351,7 +350,7 @@ install_brew
 show_info "Installing build dependencies..."
 install_build_deps
 
-show_info "Initializing git"
+show_info "Initializing git..."
 initialize_git_lfs
 
 if ! type "docker" > /dev/null 2>&1
