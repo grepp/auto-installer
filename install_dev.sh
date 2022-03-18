@@ -211,7 +211,8 @@ install_rbenv() {
     eval "$(rbenv init -)"
     curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
   else
-    show_info "rbenv is already installed."
+    show_info "rbenv is already installed. Upgrading rbenv..."
+    brew install rbenv ruby-build
     eval "$(rbenv init -)"
   fi
 }
@@ -243,7 +244,8 @@ install_nvm() {
     set +e
     eval "[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"" > /dev/null
   else
-    show_info "nvm is already installed."
+    show_info "nvm is already installed. Upgrading nvm..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash > /dev/null
     eval "[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"" > /dev/null
   fi
 }
@@ -282,7 +284,8 @@ install_pyenv() {
     set +e
     eval "$pyenv_init_script"
   else
-    show_info "pyenv is already installed."
+    show_info "pyenv is already installed. Upgrading pyenv..."
+    brew install pyenv
     eval "$pyenv_init_script"
   fi
 }
