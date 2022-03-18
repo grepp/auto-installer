@@ -110,7 +110,7 @@ fi
 
 ROOT_PATH=$(pwd)
 PYTHON_VERSION="3.9.10"
-RUBY_VERSION="2.7.5"
+RUBY_VERSION="2.7.2"
 NODE_VERSION="16.14.1"
 
 while [ $# -gt 0 ]; do
