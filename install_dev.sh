@@ -413,3 +413,14 @@ install_pyenv
 # Install Python
 show_info "Installing Python..."
 install_python
+
+echo ' '
+echo '     _______ .______       _______ .______   .______     '
+echo '    /  _____||   _  \     |   ____||   _  \  |   _  \    '
+echo '   |  |  __  |  |_)  |    |  |__   |  |_)  | |  |_)  |   '
+echo '   |  | |_ | |      /     |   __|  |   ___/  |   ___/    '
+echo '   |  |__| | |  |\  \----.|  |____ |  |      |  |        '
+echo '    \______| | _| `._____||_______|| _|      | _|        '
+echo ' '
+echo 'Installation finished.'
+echo 'Have a nice day!'
