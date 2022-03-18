@@ -22,21 +22,18 @@ zsh <(curl -fsSL https://raw.githubusercontent.com/grepp/auto-installer/main/ins
 zsh <(curl -fsSL https://raw.githubusercontent.com/grepp/auto-installer/main/install_dev.sh) --python-version=3.10.2 --ruby-version=2.7.5 --node-version=16.14.1
 ```
 
-## FAQ
+## 기여자
 
-### Q1. 스크립트 실행 후에 로컬에서 hera-webapp.test 접속이 되지 않아요.
-
-- icu4c 라이브러리 업그레이드가 되면서 charlock_holmes gem의 재설치가 필요합니다. 다음의 절차를 따라서 실행해주세요.
-
-```
-# 터미널을 엽니다. hera-webapp 저장소로 변경한 후, 다음 명령어를 순서대로 실행해주세요.
-
-> gem uninstall charlock_holmes
-> bundle install
-> pkill -9 puma-dev
-```
-
-- 해당 절차를 진행해도 정상 실행이 되지 않으면 플랫폼팀에 연락 부탁드리겠습니다.
+- Peter
+- Ian
+- Oliver
+- Gavin
+- Ada
+- Demi
+- Koa
+- Neo
+- Marco
+- Green
 
 ## Notes
 
