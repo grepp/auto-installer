@@ -110,7 +110,7 @@ fi
 
 ROOT_PATH=$(pwd)
 PYTHON_VERSION="3.9.10"
-RUBY_VERSION="2.7.5"
+RUBY_VERSION="2.7.2"
 NODE_VERSION="16.14.1"
 
 while [ $# -gt 0 ]; do
@@ -211,7 +211,8 @@ install_rbenv() {
     eval "$(rbenv init -)"
     curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
   else
-    show_info "rbenv is already installed."
+    show_info "rbenv is already installed. Upgrading rbenv..."
+    brew install rbenv ruby-build
     eval "$(rbenv init -)"
   fi
 }
@@ -243,7 +244,8 @@ install_nvm() {
     set +e
     eval "[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"" > /dev/null
   else
-    show_info "nvm is already installed."
+    show_info "nvm is already installed. Upgrading nvm..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash > /dev/null
     eval "[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"" > /dev/null
   fi
 }
@@ -282,7 +284,8 @@ install_pyenv() {
     set +e
     eval "$pyenv_init_script"
   else
-    show_info "pyenv is already installed."
+    show_info "pyenv is already installed. Upgrading pyenv..."
+    brew install pyenv
     eval "$pyenv_init_script"
   fi
 }
@@ -410,3 +413,14 @@ install_pyenv
 # Install Python
 show_info "Installing Python..."
 install_python
+
+echo ' '
+echo '     _______ .______       _______ .______   .______     '
+echo '    /  _____||   _  \     |   ____||   _  \  |   _  \    '
+echo '   |  |  __  |  |_)  |    |  |__   |  |_)  | |  |_)  |   '
+echo '   |  | |_ | |      /     |   __|  |   ___/  |   ___/    '
+echo '   |  |__| | |  |\  \----.|  |____ |  |      |  |        '
+echo '    \______| | _| `._____||_______|| _|      | _|        '
+echo ' '
+echo 'Installation finished.'
+echo 'Have a nice day!'
