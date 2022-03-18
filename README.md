@@ -30,6 +30,7 @@ zsh <(curl -fsSL https://raw.githubusercontent.com/grepp/auto-installer/main/ins
 - Gavin
 - Ada
 - Demi
+- Charles
 - Koa
 - Neo
 - Marco
